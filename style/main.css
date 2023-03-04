@@ -52,4 +52,50 @@ a {
   text-align: end;
 }
 
+.weather {
+  width: 90%;
+  margin: 3rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.weather-card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+  border-radius: 1rem;
+  padding: 0 1rem;
+  width: 25rem;
+}
+.weather-card-header {
+  color: #2c5697;
+  text-align: center;
+}
+.weather-card-header h2 {
+  padding: 0 1rem;
+}
+.weather-card-body .metar-table {
+  padding: 1rem;
+  margin: 0 auto;
+  border: 1px solid #2c5697;
+  border-radius: 1rem;
+}
+.weather-card-body .metar-table .metar-row {
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+.weather-card-body .metar-table .metar-column-left {
+  color: #2c5697;
+}
+.weather-card-body .metar-table .metar-column-right {
+  color: #ff7f32;
+}
+.weather-card-footer {
+  text-align: center;
+}
+.weather-card-footer p {
+  color: #ff7f32;
+  opacity: 60%;
+  font-size: 0.7em;
+}
+
 /*# sourceMappingURL=main.css.map */
