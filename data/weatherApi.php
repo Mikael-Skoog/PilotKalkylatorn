@@ -1,10 +1,10 @@
 <?php
 class WeatherApi {
-    public $station;
-    private $url;
-    private $token;
-    public $metarData;
-    public $metar = [];
+    public string $station;
+    private string $url;
+    private string $token;
+    public array $metarData;
+    public array $metar = [];
 
     function __construct($station) {
         $this->station = $station;
@@ -13,7 +13,7 @@ class WeatherApi {
         $this->callApi();
     }
 
-    function callApi() {
+    function callApi(): void {
         $ch = curl_init();
 
         curl_setopt($ch, CURLOPT_URL, $this->url);
@@ -30,7 +30,7 @@ class WeatherApi {
         curl_close($ch);
     }
 
-    function setData() {
+    function setData(): void {
         $this->metar["altimeter"] = $this->metarData["altimeter"]["value"] . " " . $this->metarData["units"]["altimeter"];
         $this->metar["visibility"] = $this->metarData["visibility"]["value"] . " " . $this->metarData["units"]["visibility"];
         $this->metar["wind_direction"] = $this->metarData["wind_direction"]["value"] . "°";
