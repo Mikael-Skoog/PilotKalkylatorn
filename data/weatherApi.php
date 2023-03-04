@@ -37,6 +37,10 @@ class WeatherApi {
         $this->metar["wind_speed"] = $this->metarData["wind_speed"]["value"] . " " . $this->metarData["units"]["wind_speed"];
         $this->metar["temperature"] = $this->metarData["temperature"]["value"] . " °" . $this->metarData["units"]["temperature"];
         $this->metar["dewpoint"] = $this->metarData["dewpoint"]["value"] . " °" . $this->metarData["units"]["temperature"];
+        $this->metar["density_altitude"] = $this->metarData["density_altitude"] . " " . $this->metarData["units"]["altitude"];
+        $this->metar["pressure_altitude"] = $this->metarData["pressure_altitude"] . " " . $this->metarData["units"]["altitude"];
+
+
 
         if(isset($this->metarData["wind_gust"]["value"])) {
             $this->metar["wind_gust"] = $this->metarData["wind_gust"]["value"] . " " . $this->metarData["units"]["wind_speed"];

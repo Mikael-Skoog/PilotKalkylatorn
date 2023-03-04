@@ -24,6 +24,10 @@ echo($metar["temperature"]);
 echo("<br>");
 echo($metar["dewpoint"]);
 echo("<br>");
+echo($metar["density_altitude"]);
+echo("<br>");
+echo($metar["pressure_altitude"]);
+echo("<br>");
 
 
 echo('<pre>');
