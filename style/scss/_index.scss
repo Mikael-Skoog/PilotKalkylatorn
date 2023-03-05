@@ -1,0 +1,31 @@
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .news {
+    width: 23rem;
+    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+    margin-top: 3rem;
+    border-radius: 1rem;
+    margin-bottom: 10rem;
+
+    &-head {
+      text-align: center;
+      color: #2c5697;
+    }
+
+    &-body {
+      padding: 0 1rem;
+
+      h4 {
+        color: #ff7f32;
+      }
+    }
+
+    &-foot {
+      text-align: center;
+    }
+  }
+}

@@ -1,8 +1,8 @@
 <?php
- include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/head.php';
- include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/navbar.php';
- ?>
+ require_once($_SERVER['DOCUMENT_ROOT'] . '/app/load.php');
 
+ $content = [
+     'title' => 'Startsida'
+ ];
 
-
- <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/foot.php'; ?>
+ view('index', $content);

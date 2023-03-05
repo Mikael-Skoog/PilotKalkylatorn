@@ -16,3 +16,13 @@ body {
 a {
     text-decoration: none;
 }
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -15px 10px -15px $primary;
+    text-align: center;
+    color: #ff7f32;
+    background: white;
+}

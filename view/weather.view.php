@@ -1,10 +1,3 @@
-<?php
-$title = "Väder";
- include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/head.php';
- include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/navbar.php';
- include_once $_SERVER['DOCUMENT_ROOT'] . '/controller/controllerWeather.php';
- ?>
-
 <div class="weather">
     <div class="weather-card">
         <div class="weather-card-header">
@@ -15,74 +8,80 @@ $title = "Väder";
             <table class="metar-table">
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Station:</p></td>
-                    <td class="metar-column-right"><?= $metar["station"] ?></td>
+                    <td class="metar-column-right">
+                        <form action="" method="GET">
+                            <select name="station" onchange="this.form.submit()">
+                                <option value=""><?= $content['metar']["station"] ?></option>
+                                <?php foreach ($content['stations'] as $station): ?>
+                                <option value="<?= $station ?>"><?= $station ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </form>
+                    </td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Utfärdad:</p></td>
-                    <td class="metar-column-right"><?= $metar["time"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["time"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>QNH:</p></td>
-                    <td class="metar-column-right"><?= $metar["altimeter"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["altimeter"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Vindriktning:</p></td>
-                    <td class="metar-column-right"><?= $metar["wind_direction"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["wind_direction"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Vindvariation:</p></td>
-                    <td class="metar-column-right"><?= $metar["wind_variable_direction"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["wind_variable_direction"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Vindhastighet:</p></td>
-                    <td class="metar-column-right"><?= $metar["wind_speed"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["wind_speed"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Vindby:</p></td>
-                    <td class="metar-column-right"><?= $metar["wind_gust"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["wind_gust"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Sikt:</p></td>
-                    <td class="metar-column-right"><?= $metar["visibility"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["visibility"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Moln:</p></td>
-                    <td class="metar-column-right">
+                    <td class="metar-column-right"><p>
                         <?php
-                        foreach ($metar["clouds"] as $cloud) {
+                        foreach ($content['metar']["clouds"] as $cloud) {
                             echo $cloud . " ";
                         }
-                        ?>
+                        ?></p>
                     </td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Temperatur:</p></td>
-                    <td class="metar-column-right"><?= $metar["temperature"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["temperature"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Daggpunkt:</p></td>
-                    <td class="metar-column-right"><?= $metar["dewpoint"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["dewpoint"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Luftfuktighet:</p></td>
-                    <td class="metar-column-right"><?= $metar["relative_humidity"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["relative_humidity"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Tryckhöjd:</p></td>
-                    <td class="metar-column-right"><?= $metar["pressure_altitude"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["pressure_altitude"] ?></p></td>
                 </tr>
                 <tr class="metar-row">
                     <td class="metar-column-left"><p>Densitetshöjd:</p></td>
-                    <td class="metar-column-right"><?= $metar["density_altitude"] ?></td>
+                    <td class="metar-column-right"><p><?= $content['metar']["density_altitude"] ?></p></td>
                 </tr>
             </table>
         </div>
         <div class="weather-card-footer">
             <hr>
-            <p><?= $metar["sanitized"] ?></p>
+            <p><?= $content['metar']["sanitized"] ?></p>
         </div>
     </div>
 </div>
-
-
- <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/templates/foot.php'; ?>
