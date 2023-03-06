@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style/main.css">
+        <link rel="stylesheet" href="/public/assets/css/main.css">
         <title>PilotKalkylatorn - <?= $content['title']; ?></title>
     </head>
     <body>
@@ -12,7 +12,7 @@
             <div class="navbar">
                 <div class="leftNav">
                     <div class="logo">
-                        <a href="/"><img src="../img/Logo.png" alt=""></a>
+                        <a href="/"><img src="../public/assets/img/Logo.png" alt=""></a>
                     </div>
                     <div class="links">
                         <a href="/weather.php">Väder</a>
