@@ -9,21 +9,22 @@ class Home extends Controller
 {
     public function index()
     {
-        $content = [
+        $data = [
             'title' => 'Startsida',
             'view' => 'home'];
 
-        $this->view('layout', $content);
+        $this->view('layout', $data);
     }
 
     public function contact()
     {
-        $content = [
-            'title' => 'Kontakt',
-            'view' => 'contact'];
+        $weather = new WeatherApi('esgg');
 
-        $this->view('layout', $content);
+        $data = [
+            'title' => 'Kontakt',
+            'view' => 'contact',
+            'metar' => $weather->metarData];
+
+        $this->view('layout', $data);
     }
 }
-
-$home = new Home;

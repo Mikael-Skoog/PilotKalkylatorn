@@ -2,10 +2,11 @@
 
 class Controller
 {
-    protected function view($name, $content = []): void
+    protected function view($name, $data = [], $model = ''): void
     {
         $filename = '../app/views/'.$name.'.view.php';
-        $data = $content;
+        $data = $data;
+        $model = $model;
 
         if(file_exists($filename))
         {

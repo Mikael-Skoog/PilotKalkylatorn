@@ -9,3 +9,4 @@ require 'config.php';
 require 'functions.php';
 require 'Controller.php';
 require 'Router.php';
+require 'WeatherApi.php';
