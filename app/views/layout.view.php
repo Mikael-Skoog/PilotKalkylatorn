@@ -23,19 +23,14 @@
                         <li class="nav-item">
                             <a class="nav-link t-s" href="<?= ROOT ?>/weather">Väder</a>
                         </li>
-                        <!--
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                            <a class="nav-link dropdown-toggle t-s" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Kalkylator
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <li><a class="dropdown-item t-s" href="<?= ROOT ?>/calculate/convert">Konvertera</a></li>
                             </ul>
                         </li>
-                        -->
                     </ul>
                     <!--
                     <form class="d-flex" role="search">
@@ -52,7 +47,8 @@
         </div>
 
 
-
+        <script src="<?= ROOT ?>/assets/js/main.js"></script>
+        <script src="<?= ROOT ?>/assets/js/convert.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     </body>
 </html>

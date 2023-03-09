@@ -15,7 +15,8 @@ class Weather extends Controller
         $data = [
             'title' => 'Väder',
             'view' => 'weather',
-            'metar' => $weather->metarData];
+            'metar' => $weather->metarData,
+            'taf' => $weather->tafData];
 
         $this->view('layout', $data);
     }

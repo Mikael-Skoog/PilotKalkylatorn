@@ -1,32 +1,97 @@
-.content {
-  width: 100%;
-  margin-top: 10rem;
+.home {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
 
-  .news {
-    width: 23rem;
-    box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
-    margin-top: 20rem;
-    border-radius: 1rem;
-    margin-bottom: 10rem;
+  &-content {
+    flex: 3 1 0%;
+    vertical-align: top;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    font-size: 1rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+    0.3em 0.3em 1em $primary;
 
-    &-head {
-      text-align: center;
+    &-banner {
+      height: 10rem;
+      object-fit: cover;
+      padding: 1rem;
+      border-radius: 2rem;
+      width: 100%;
+    }
+
+    &-header {
+      padding: 0.5rem;
+      font-weight: bold;
+      font-size: 1.1rem;
       color: #2c5697;
     }
 
-    &-body {
-      padding: 0 1rem;
+    &-card {
+      width: 100%;
 
-      h4 {
-        color: #ff7f32;
+      &-small-header {
+        font-weight: bold;
+        width: 100%;
+        color: #2c5697;
       }
     }
+  }
 
-    &-foot {
+  &-information {
+    flex: 1 1 0%;
+    vertical-align: top;
+    place-content: stretch flex-start;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    &-version {
+      padding: 0.5rem;
       text-align: center;
+      font-size: 0.6rem;
+
+    }
+
+    &-header {
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.3rem;
+      color: #2c5697;
+
+    }
+
+    &-news {
+      width: 90%;
+      padding: 0.8rem;
+      box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+      0.3em 0.3em 1em $primary;
+
+      &-header {
+        padding: 0.5rem;
+        color: $secondary;
+        background-color: $primary;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+
+      &-body {
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+
+      &-footer {
+        padding: 0.5rem;
+        text-align: center;
+        background-color: $primary;
+        color: #ff7f32;
+        font-size: 0.8rem;
+
+      }
     }
   }
 }
