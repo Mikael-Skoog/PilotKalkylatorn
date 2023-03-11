@@ -67,8 +67,6 @@ a {
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em #2c5697;
 }
 .home-content-banner {
-  height: 10rem;
-  object-fit: cover;
   padding: 1rem;
   border-radius: 2rem;
   width: 100%;
@@ -109,6 +107,7 @@ a {
 }
 .home-information-news {
   width: 90%;
+  margin-bottom: 1rem;
   padding: 0.8rem;
   box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px white, 0.3em 0.3em 1em #2c5697;
 }

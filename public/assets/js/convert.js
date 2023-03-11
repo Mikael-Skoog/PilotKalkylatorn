@@ -2,13 +2,16 @@ const cmInRadio = document.getElementById("cmInRadio");
 const cmInResult = document.getElementById("cmInResult");
 const cmInUnit = document.getElementById("cmInUnit");
 const cmInValue = document.getElementById("cmInValue");
+const cmInFrom = document.getElementById("cmInFrom");
 
 function cmInChecked() {
     if(cmInRadio.checked) {
         cmInUnit.innerText = "in";
+        cmInFrom.innerText = "cm";
         return "in"
     } else {
         cmInUnit.innerText = "cm";
+        cmInFrom.innerText = "in";
         return "cm"
     }
 }
