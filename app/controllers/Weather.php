@@ -6,8 +6,13 @@ class Weather extends Controller
     {
         if(isset($_GET['station'])) {
             $station = $_GET['station'];
+            setcookie("metarStation", $_GET['station'], time() + (86400 * 30), "/");
         } else {
-            $station = 'esgg';
+            if(isset($_COOKIE["metarStation"])) {
+                $station = $_COOKIE["metarStation"];
+            } else {
+                $station = 'esgg';
+            }
         }
 
         $weather = new WeatherApi($station);

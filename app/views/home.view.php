@@ -1,7 +1,7 @@
 
     <div class="row">
-        <div class="col-sm-8">
-            <div class="home-content" >
+        <div class="col-md-8">
+            <div class="home-content bshadow" >
                 <div  class="home-content-header" >
                     Välkommen till PilotKalkylatornt!
                 </div>
@@ -57,7 +57,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
             <div class="home-information" >
                 <div  class="home-information-version" >
                     Nuvarande version: 1.1.1
@@ -67,7 +67,7 @@
                 </div>
 
                 <!-- News card -->
-                <div class="home-information-news" >
+                <div class="home-information-news bshadow" >
                     <div  class="home-information-news-header" >
                         TAF m.m!
                     </div>
@@ -80,7 +80,7 @@
                 </div>
 
                 <!-- News card -->
-                <div class="home-information-news" >
+                <div class="home-information-news bshadow" >
                     <div  class="home-information-news-header" >
                         PilotKalylatorn lanseras!
                     </div>

@@ -1,5 +1,5 @@
 
-<div class="card weather-card mx-auto b-t" style="width: 22rem">
+<div class="card weather-card mx-auto b-t bshadow" style="width: 22rem">
     <div class="card-header b-p t-s fw-bold">
         METAR
     </div>
