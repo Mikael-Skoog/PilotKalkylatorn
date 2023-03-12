@@ -60,10 +60,23 @@
         <div class="col-md-4">
             <div class="home-information" >
                 <div  class="home-information-version" >
-                    Nuvarande version: 1.1.1
+                    Nuvarande version: 1.1.2
                 </div>
                 <div  class="home-information-header" >
                     Nyheter
+                </div>
+
+                <!-- News card -->
+                <div class="home-information-news bshadow" >
+                    <div  class="home-information-news-header" >
+                        Avstånd och vikt!
+                    </div>
+                    <div  class="home-information-news-body" >
+                        Nu kan man konvertera avstånd och vikter.
+                    </div>
+                    <div  class="home-information-news-footer" >
+                        2023-03-12
+                    </div>
                 </div>
 
                 <!-- News card -->
